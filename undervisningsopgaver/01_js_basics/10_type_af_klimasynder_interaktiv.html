@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" href="">
+</head>
+
+<body>
+
+    <p>Angiv længde på flyrejse i timer:</p>
+    <input type="text" id="længde">
+    <button>Klik for CO2 udledning. Kik i konsol</button>
+
+    <script>
+        document.querySelector("button").addEventListener("click", kuldioxid);
+
+
+
+        function kuldioxid() {
+
+            let timer = document.querySelector("#længde").value;
+            let co2UdledtIKgVedFlyrejse = timer * 109;
+
+            if (isNaN(timer)) {
+
+                co2UdledtIKgVedFlyrejse = "Du har ikke indtastet tal!";
+            }
+
+            console.log(co2UdledtIKgVedFlyrejse);
+
+
+        }
+
+    </script>
+</body>
+
+</html>
