@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <title>Titel</title>
+</head>
+
+<body>
+    <main>
+        <h1>Titel</h1>
+        <h2>Undertitel</h2>
+
+        <section id="sektion">
+            <article>
+                <img src="assets/natur.jpg" alt="Natur">
+                <h3>Artikel 1</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempora alias eum deleniti suscipit, neque voluptatum beatae rerum culpa, laudantium cumque impedit illo. Pariatur quis cumque nostrum possimus! Ipsa, nesciunt, quaerat!</p>
+            </article>
+
+            <article>
+                <img src="assets/sko.jpg" alt="Sko">
+                <h3>Artikel 2</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio, a. Neque odit consequatur in eligendi quia! Eos praesentium aliquid sunt numquam, blanditiis eum quam reiciendis voluptate cumque dolores ullam quod.</p>
+
+            </article>
+        </section>
+
+        <footer>
+
+        </footer>
+
+    </main>
+
+    <script>
+        const titel = document.querySelector("h1");
+
+        console.log(titel.textContent);
+
+        titel.textContent = "Natur og sneakers";
+
+        console.log(titel.textContent);
+
+
+        const artikeltitel = document.querySelector("article:nth-child(1) h3");
+
+        console.log(artikeltitel.textContent);
+
+        artikeltitel.textContent = "Naturen";
+
+        console.log(artikeltitel.textContent);
+
+
+        const artikel1 = document.querySelector("article:nth-child(1) p");
+
+        console.log(artikel1.textContent);
+
+        artikel1.innerHTML = "Her ser du et <b>træ</b>";
+
+
+
+        const artikeltitel2 = document.querySelector("article:nth-child(2) h3");
+
+        console.log(artikeltitel2.textContent);
+
+        artikeltitel2.textContent = "Sneakers";
+
+        console.log(artikeltitel2.textContent);
+
+
+        const artikel2 = document.querySelector("article:nth-child(2) p");
+
+        console.log(artikel2.textContent);
+
+        artikel2.innerHTML = "Her ser du et par <b>sko</b>";
+
+
+        const pic1 = document.querySelector("article:nth-child(1) img");
+
+        pic1.src = "https://placeimg.com/399/400/any";
+
+        pic1.alt = "Tester teksten";
+
+
+        const pic2 = document.querySelector("article:nth-child(2) img");
+
+        pic2.src = "https://placeimg.com/400/400/any";
+
+        pic2.alt = "Tester teksten part 2";
+
+        //Fanger nuværende sektion
+        let mainSection = document.querySelector("section");
+
+        //Tilføjer nyt article element
+        let newArticle = document.createElement("article");
+        //Tilføjer nyt h3 element
+        let overskrift = document.createElement("h3");
+        //Tilføjer tekst til h3 element
+        let overskriftTekst = document.createTextNode("Artikel 3");
+        //Tilføjer nyt billede element
+        let img = document.createElement("img");
+        //Tilføjer url til billede element
+        img.src = "https://placeimg.com/400/400/any";
+
+        //Indsætter billede til article
+        newArticle.appendChild(img);
+        //Indsætter overskrift til article
+        newArticle.appendChild(overskrift);
+        //Indsætter tekst til overskrift
+        overskrift.appendChild(overskriftTekst);
+
+        //Tilføjer nyt p element til article
+        let brødtekst = document.createElement("p");
+        //Tilføjer tekst til p element
+        let brødtekstTekst = document.createTextNode("Tekst til artikel 3");
+        //Indsætter brødtekst til p element
+        brødtekst.appendChild(brødtekstTekst);
+        //Indsætter brødtekst til article
+        newArticle.appendChild(brødtekst);
+
+
+        //Indsætter article element til sektion
+        mainSection.appendChild(newArticle);
+
+    </script>
+
+</body>
+
+</html>
